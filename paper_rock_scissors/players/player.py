@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+
 from paper_rock_scissors.symbol import Symbol
 
 
