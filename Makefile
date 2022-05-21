@@ -41,6 +41,10 @@ test:
 	poetry run coverage run --rcfile ./pyproject.toml -m pytest ./tests
 	poetry run coverage report --fail-under 80
 
+.PHONY: play
+play:
+	poetry run python paper_rock_scissors/main.py
+
 .PHONY: clean
 clean: ## Clean unnecessary files and folders
 	@find ./ -type d -name '__pycache__' -exec rm -rf {} +;
