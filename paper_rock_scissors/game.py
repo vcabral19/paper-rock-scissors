@@ -29,7 +29,7 @@ class Game:
             self.player2.win()
             return f"This match goes for {self.player2.name}! {symbol_player2.name} beats {symbol_player1.name}"
 
-    def _broadcast_winner(self) -> None:
+    def _broadcast_winner(self) -> str:
         print("... and the winner is ")
         sleep(1)
         print("... ")
@@ -38,14 +38,15 @@ class Game:
         sleep(1)
         print("... ")
         if self.player1.victories > self.player2.victories:
-            print(f"{self.player1.name} with {self.player1.victories} victories! Congratulations!!")
+            announcement = f"{self.player1.name} with {self.player1.victories} victories! Congratulations!!"
         elif self.player2.victories > self.player1.victories:
-            print(f"{self.player2.name} with {self.player2.victories} victories! Congratulations!!")
+            announcement = f"{self.player2.name} with {self.player2.victories} victories! Congratulations!!"
         else:
-            print(
+            announcement = (
                 f"Both {self.player1.name} and {self.player2.name} have {self.player1.victories} victories. That's "
                 "a TIED GAME!"
             )
+        return announcement
 
     def start_game(self) -> None:
         print("Starting the game")
@@ -53,5 +54,5 @@ class Game:
             print(f"Match number {i + 1}")
             print(self._play_match(self.player1.play(), self.player2.play()))
 
-        self._broadcast_winner()
+        print(self._broadcast_winner())
         print("Game Over")
