@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "paper-rock-scissors"
 version = "0.1.0"
-description = ""
+description = "A simple Paper Rock and Scissors game for the console"
 authors = ["vcabral19 <vitorcabral19@gmail.com>"]
 
 [tool.poetry.dependencies]
