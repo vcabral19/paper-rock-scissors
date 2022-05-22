@@ -6,6 +6,11 @@ You play against a computer for n matches. n and the player name is defined befo
 
 
 ## How to install
+
+[**Install Poetry**](https://python-poetry.org/docs/)
+
+and then:
+
 ```bash
 make install
 ```
@@ -35,11 +40,12 @@ In case victories are equal between the 2 players the game ends in a tie.
 ## Requirements
 
 ### Production
-These are necessary (or recommended) to run the project and play the game
+These are necessary (or recommended) to run the project and play the game:
 
 * [Python 3.10](https://www.python.org/downloads/) - It can be managed by Poetry, no need for manual download
-* [Poetry 1.1.13](https://python-poetry.org/docs/) - Poetry is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. It is also capable of managing Python virtual environments outside the box
-* [Make 3.81](https://www.gnu.org/software/make/) - For storing project recipes. If you are using a GNU based system you probably don't need to worry about having it. If you are not you can chek the [Makefile](Makefile) content and use its commands
+* [Poetry 1.1.13](https://python-poetry.org/docs/) - Poetry is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on, and it will manage (install/update) them for you. It is also capable of managing Python virtual environments outside the box
+* [Make 3.81](https://www.gnu.org/software/make/) - For storing project recipes. If you are using a GNU based system you probably don't need to worry about having it. If you are not you can check the [Makefile](Makefile) content and use its commands
+
 
 ### Development
 These are only necessary for the development/maintenance of the codebase.
