@@ -8,7 +8,7 @@ if __name__ == "__main__":
         num_of_matches = int(input("Enter the total number of matches you desire to play in this Game: "))
         print(f"Great, you are playing {num_of_matches} matches")
     except ValueError:
-        print("Oops!  That was no valid number.  Try again...")
+        print("Oops! That was not a valid number. Try again...")
         raise
 
     player_name = input("Now, input players name to start: ")

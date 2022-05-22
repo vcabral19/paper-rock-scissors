@@ -17,7 +17,13 @@ class Game:
         self.num_matches = num_matches
 
     def _player1_wins(self, symbol_player1: Symbol, symbol_player2: Symbol) -> bool:
-        return self.victory_rules.get(symbol_player1).get(symbol_player2)
+        symbol1_rule = self.victory_rules.get(symbol_player1)
+        if not symbol1_rule:
+            raise
+        victory = symbol1_rule.get(symbol_player2)
+        if not victory:
+            raise
+        return victory
 
     def _play_match(self, symbol_player1: Symbol, symbol_player2: Symbol) -> str:
         if symbol_player1 == symbol_player2:
