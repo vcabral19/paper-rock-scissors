@@ -2,16 +2,35 @@
 
 This a **Python** implementation of a Paper Rock and Scissors game, designed to be played on the console.
 
+You play against a computer for n matches. n and the player name is defined before starting the game.
+
+
 ## How to install
 ```bash
 make install
 ```
 
 ## How to play
-
+To start the game:
 ```bash
 make play
 ```
+
+The winner of each match is determined by the following schema:
+* Paper beats (wraps) rock
+* Rock beats (blunts) scissors
+* Scissors beats (cuts) paper.
+
+For choosing your action press the **number** corresponding to the action:
+
+* Paper: **0**
+* Rock: **1**
+* Scissors: **2**
+
+By the end of the n matches, the player that have a bigger number of victories wins the game.
+In case victories are equal between the 2 players the game ends in a tie.
+
+![img.png](img.png)
 
 ## Requirements
 
@@ -20,7 +39,7 @@ These are necessary (or recommended) to run the project and play the game
 
 * [Python 3.10](https://www.python.org/downloads/) - It can be managed by Poetry, no need for manual download
 * [Poetry 1.1.13](https://python-poetry.org/docs/) - Poetry is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. It is also capable of managing Python virtual environments outside the box
-* [Make 3.81](https://www.gnu.org/software/make/) - For storing project recipes. If you are using a GNU based system you probably don't need to worry about having it. If you are not you can chek the [Makefile](Makefile) content and use it's commands
+* [Make 3.81](https://www.gnu.org/software/make/) - For storing project recipes. If you are using a GNU based system you probably don't need to worry about having it. If you are not you can chek the [Makefile](Makefile) content and use its commands
 
 ### Development
 These are only necessary for the development/maintenance of the codebase.
@@ -61,7 +80,7 @@ and then for validating or catch something that demands manual code modification
 make style-check
 ```
 
-Finally you can validate the types handling on the program running:
+Finally you can validate the type hinting on the program running:
 ```bash
 make static-check
 ```
