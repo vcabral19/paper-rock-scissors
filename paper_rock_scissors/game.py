@@ -18,11 +18,11 @@ class Game:
 
     def _player1_wins(self, symbol_player1: Symbol, symbol_player2: Symbol) -> bool:
         symbol1_rule = self.victory_rules.get(symbol_player1)
-        if not symbol1_rule:
-            raise
+        if symbol1_rule is None:
+            raise TypeError
         victory = symbol1_rule.get(symbol_player2)
-        if not victory:
-            raise
+        if victory is None:
+            raise TypeError
         return victory
 
     def _play_match(self, symbol_player1: Symbol, symbol_player2: Symbol) -> str:
@@ -59,6 +59,8 @@ class Game:
         for i in range(self.num_matches):
             print(f"Match number {i + 1}")
             print(self._play_match(self.player1.play(), self.player2.play()))
+            print("End of the Match!")
+            print("----------------------------------------")
 
         print(self._broadcast_winner())
         print("Game Over")

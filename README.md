@@ -2,8 +2,6 @@
 
 This a **Python** implementation of a Paper Rock and Scissors game, designed to be played on the console.
 
-You play against a computer for n matches. n and the player name is defined before starting the game.
-
 
 ## How to install
 
@@ -32,9 +30,10 @@ For choosing your action press the **number** corresponding to the action:
 * Rock: **1**
 * Scissors: **2**
 
-By the end of the n matches, the player that have a bigger number of victories wins the game.
-In case victories are equal between the 2 players the game ends in a tie.
+You play against a computer for n matches. n and the human player name is defined before starting the game.
 
+By the end of the n matches, the player that has a bigger number of victories wins the game.
+In case the number of victories between the two players is equal the game ends in a tie.
 ![img.png](img.png)
 
 ## Requirements

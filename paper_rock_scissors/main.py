@@ -11,7 +11,7 @@ if __name__ == "__main__":
         print("Oops! That was not a valid number. Try again...")
         raise
 
-    player_name = input("Now, input players name to start: ")
+    player_name = input("Now, input player's name to start: ")
 
     human_player = HumanPlayer(player_name)
     cpu_player = CPUPlayer()
