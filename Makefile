@@ -29,7 +29,7 @@ style-check: ## Run style checks.
 .PHONY: static-check
 static-check: ## Run strict typing checks.
 	printf "Static Checking with Mypy\n"
-	poetry run mypy library service --config-file pyproject.toml
+	poetry run mypy paper_rock_scissors --config-file pyproject.toml
 
 .PHONY: restyle
 restyle: ## Run black and isort linter
